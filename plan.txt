@@ -1,0 +1,35 @@
+Ship Class:
+ - state: {
+      length: number,
+      numberOfHits: number,
+      sunk: boolean
+ }
+
+ - methods: {
+      hit: function -> void // should increase the number of 'hits' in your Ship
+      isSunk: function -> boolean // should return true if the ship is sunk based on the length and the number of hits it has taken
+ }
+
+
+Gameboard Class:
+  - state: {
+        ships: Array<Ship>,
+        missedShots: Array<string>
+  }
+
+  - methods: {
+        placeShip: function -> void // should add a ship to the gameboard
+        receiveAttack: function -> void // should take a set of coordinates and determine whether or not the attack hit a ship
+        allSunk: function -> boolean // should return true if all ships on the board have been sunk
+  }
+
+
+Player Class:
+  - state: {
+        gameboard: Gameboard
+  }
+
+  - methods: {
+        attack: function -> void // should take a set of coordinates and tell the gameboard to receive an attack
+  }
+```
