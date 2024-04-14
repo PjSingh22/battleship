@@ -10,6 +10,14 @@ Ship Class:
       isSunk: function -> boolean // should return true if the ship is sunk based on the length and the number of hits it has taken
  }
 
+ */
+  ship sizes:
+  carrier: 4 x 1
+  battleship: 3 x 2
+  cruiser: 2 x 3
+  submarine: 1 x 4
+ /*
+
 
 Gameboard Class:
   - state: {
@@ -21,6 +29,18 @@ Gameboard Class:
         placeShip: function -> void // should add a ship to the gameboard
         receiveAttack: function -> void // should take a set of coordinates and determine whether or not the attack hit a ship
         allSunk: function -> boolean // should return true if all ships on the board have been sunk
+  }
+
+Square Class:
+  - state: {
+        hasShip: boolean,
+        isHit: boolean
+        ship: Ship
+  }
+
+  - methods: {
+        placeShip: function -> void // should add a ship to the square
+        receiveAttack: function -> void // should change the isHit property to true if the square has a ship on it
   }
 
 
