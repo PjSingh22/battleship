@@ -6,7 +6,7 @@ function ComputerBoard() {
     <div>
       <div id="computer-board" className='grid grid-cols-10'>
         {Array(100).fill(null).map((_, i) => (
-          <Square key={i} val={i + 1} />
+          <Square key={i} val={i + 1} placed={false} />
         ))}
       </div>
     </div>
