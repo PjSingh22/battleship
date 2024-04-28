@@ -7,9 +7,9 @@ interface SquareProps {
 }
 
 function Square({ val, placed }: SquareProps) {
-  const [value, setValue] = useState(val || null)
-  const [hasShip, setHasShip] = useState(false)
-  const [isHit, setIsHit] = useState(false)
+  const [value, setValue] = useState<number>(val)
+  const [hasShip, setHasShip] = useState<boolean>(false)
+  const [isHit, setIsHit] = useState<boolean>(false)
   const [ship, setShip] = useState(null)
 
   useEffect(() => {
