@@ -7,8 +7,12 @@ function Square({ val }: { val: number }) {
   const [isHit, setIsHit] = useState(false)
   const [ship, setShip] = useState(null)
 
+  const handleClick = () => {
+    console.log(value)
+  }
+
   return (
-    <div className='border-[1px] border-black w-10 h-10'>
+    <div onClick={handleClick} className='border-[1px] border-black w-10 h-10'>
     </div>
   )
 }
